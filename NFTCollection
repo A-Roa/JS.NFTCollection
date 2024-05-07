@@ -1,12 +1,14 @@
+
 // create a variable to hold your NFT's
 const myNFTs = []
 // this function will take in some values as parameters, create an
 // NFT object using the parameters passed to it for its metadata, 
 // and store it in the variable above.
-function mintNFT (name, headgear, eyewear, accessories) {
+function mintNFT (name, headgear, color, eyewear, accessories) {
     const NFT = {
         "name": name,
         "headgear" : headgear,
+        "color" : color, 
         "eyewear" : eyewear,
         "accessories" : accessories,
     }
@@ -19,6 +21,7 @@ function listNFTs () {
     for (let i = 0; i < myNFTs.length; i++){
         console.log("NFT ID: " + (i + 1));
         console.log("\nName: " + myNFTs[i].name);
+        console.log("Color: " + myNFTs[i].color);
         console.log("Headgear: " + myNFTs[i].headgear);
         console.log("Eyewear: " + myNFTs[i].eyewear);
         console.log("Accessories: " + myNFTs[i].accessories);
@@ -32,11 +35,11 @@ function getTotalSupply() {
 }
 
 // call your functions below this line
-mintNFT("George", "Blue Hat", "Aviator Glasses", "Black Necklace");
-mintNFT("Cindy", "Red Hat", "Sunglasses", "Scarf");
-mintNFT("Oscar", "Baseball Cap", "None", "Lanyard");
-mintNFT("Charles", "Crown", "Monocle", "Staff");
-mintNFT("Doug", "Beanie", "Glasses;", "Watch");
+mintNFT("George", "Blue Hat", "Green", "Aviator Glasses", "Black Necklace");
+mintNFT("Cindy", "Red Hat", "Red", "Sunglasses", "Scarf");
+mintNFT("Oscar", "Baseball Cap", "Purple", "None", "Lanyard");
+mintNFT("Charles", "Crown", "Yellow", "Monocle", "Staff");
+mintNFT("Doug", "Beanie",  "Brown", "Glasses", "Watch");
 
 listNFTs();
 getTotalSupply();
